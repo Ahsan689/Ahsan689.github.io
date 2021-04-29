@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+
+    <style>
+        
+        .navbar-brand{
+              font-family: 'Major Mono Display', monospace;
+              font-size: 35px;
+              
+         }
+        .nav-link{
+                font-size: 18px;
+                
+        }
+        .nav-item{
+            padding-left: 30px;
+        }
+        .container{
+                    background-color:rgba(196, 133, 61, 0.37); padding-top: 3%; padding-bottom: 2%;
+                    margin-bottom: 5%; margin-top: 5%;
+        }
+        .overlay{
+            position: relative;
+        }
+                /* slide from LEFT TO RIGHT */
+        .overlay {          
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(56, 52, 15, 0.452);
+        overflow: hidden;
+        width: 0;
+        height: 100%;
+        transition: .7s ease;
+        }
+                    /* Slide from Bottom to TOP */
+        .overlay2{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(56, 52, 15, 0.452);
+        overflow: hidden;
+        width: 100%;
+        height: 0%;
+        transition: .5s ease;
+        }
+                 /* slide from RIGHT to LEFT  */
+        .overlay3{
+        position: absolute;
+        bottom: 0;
+        left: 100%;
+        right: 0%;
+        background-color: rgba(56, 52, 15, 0.452);
+        overflow: hidden;
+        width: 0%;
+        height: 100%;
+        transition: .7s ease;
+        }
+
+        .container1:hover .overlay{
+            
+            width: 100%;
+            height: 100%;
+        }
+        .container2:hover .overlay2{
+            
+            width: 100%;
+            height: 100%;
+        }
+        .container3:hover .overlay3{
+            
+            width: 100%;
+            left: 0;
+        }
+        .text {
+            color: rgb(212, 193, 193);
+            font-size: 70px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-60%, -50%);
+            white-space: nowrap;
+            }
+            .text a{
+                    text-decoration: none;
+                    color: white;
+                    
+            }
+            .text a:hover{
+                    color: rgb(209, 200, 200);
+            }
+            .container-xs{
+                position: relative;
+                 width: 100%;
+            }
+
+            .image{
+                display: block;
+                width: 100%;
+                height: auto;
+             }
+            .container-md:hover .centered{
+                    opacity: 1.0;
+                     transform:translate(-50%,-65%);
+                    transition:transform 0.5s ease-in;
+            }
+            .container-md::after:hover .centered{
+                    opacity: 0.0;
+                     transform:translate(-50%,-50%);
+                    transition:transform 0.3s ease-in;
+            }
+            /* .centered:hover {
+               
+            } */
+            
+            .nav-link:hover{
+                    opacity: 0.5;
+                    
+            }
+            
+            
+            
+         /* change navbar background on collapse */
+      @media (max-width: 720px) {
+          /* nav.navbar is for full navbar background change */
+            nav.navbar {                         
+              background: rgba(0, 0, 0, 0.315);
+              }
+            .fa-bars{
+                  color: white;
+                  font-size: 35px;
+            }
+            
+            /* #image1{
+                    
+            }
+             #image2{
+                
+            } */
+            /* #image3{
+                margin-top: 3%;margin-bottom: 10%;
+            }
+            #image4{
+                    padding-top: 10%;padding-bottom: 10%;
+            } */
+            /* #image5{
+                        
+            } */
+            /* #image6{
+                padding-top: 15%;
+            } */
+      }
+
+      .cool-link::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background: rgb(255, 250, 250);
+          transition: width .3s;
+      }
+
+        .cool-link:hover::after {
+            width: 100%;
+           
+            /* transition: width .3s; */
+        }
+
+    
+        .fa-bars{
+                font-size: 30px; padding: 0 5px 15px 5px;
+                
+        }
+        .navbar-toggler,.custom-toggler{
+                outline: transparent;
+        }
+        
+        .container-xs{
+                position: relative;
+                 width: 100%;
+                 box-shadow: rgb(245, 241, 241);
+            }
+
+            .image1{
+                display: block;
+                width: 100%;
+                height: auto;
+             }
+             .project1_head{
+                    color: black;
+                    font-family: 'Merienda', 'cursive';
+             }
+             .btn:hover{
+                  background-color: white;
+                  outline-color: white;
+                  transition: 0.8s;
+             }
+             .btn-lg{
+                    padding: 5px 40px 5px 40px;
+                    
+             }
+             .project2_head{
+                    color: white;
+             }
+             .container{
+                    background-color:rgba(241, 250, 249, 0.986); padding-top: 3%; padding-bottom: 2%;
+                    margin-bottom: 5%; margin-top: 5%;
+            }
+            .overlay1{          
+                position: absolute;
+                
+                background-color: rgb(0, 0, 0);
+                opacity: 0;
+                top: 0;
+                left: 0;
+                width: 100%;
+                width: 100%; height: 100%;
+
+                transition: .7s;
+            }
+            iframe{
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            }
+    </style>
+    <script>
+        
+    </script>
+
+</head>
+<body>
+   
+    <nav  class="navbar navbar-expand-md navbar-dark bg-dark">  
+        <!-- Navbar-light turns the backgroud Transparent-->
+            <a style="color: rgb(0, 195, 255);" class="navbar-brand " href="website.html">FOLIOsite  </a>
+
+            <button style="border: none;" class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span ><i class="fa fa-bars" aria-hidden="true"></i> </span>
+            </button>
+
+            <!-- This is the previous one -->
+
+        <div  class="collapse navbar-collapse" id= "collapsibleNavbar" >
+             <ul  class="navbar-nav">
+                <li class="nav-item">
+                    <a  style=" color: white; transition-duration: 0.3s; " class="nav-link cool-link" href="#about">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a style=" color: white; transition-duration: 0.3s;" class="nav-link cool-link" href="website.html">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a style=" color: white; transition-duration: 0.3s; " target="_self"  class="nav-link cool-link" href="project.html">PROJECT</a>
+                </li>    
+            </ul>
+        </div>
+    </nav>   
+
+                            
+
+        <div class="container">
+            <div class="row" >
+
+                    <!-- 1st Column -->
+                <div  class="col-sm-3 " style="margin-bottom: 2%;"><!------------- 1 -------------->
+                    <div class="container-xs container1" style="margin-top: 25%;"> <!------2 ------>
+                          
+                        <h3 class="project1_head">Objects of all Class instances </h3>
+            
+                    </div>  <!------2 ------>
+                </div> <!------------- 1 -------------->
+                                
+                <!-- 2nd Column -->
+                <div  id="image1" class="col-sm-7" style="margin-bottom: 3%;"> <!------------- 0 -------------->
+                    <div class="container-xs container1" style="margin-bottom: 5%;"><!------1 ------>
+                        <iframe  src="project 2 server to database/Screenshot (254).png" alt="" width="100%" height="450"  > </iframe>
+                        <!-- <div class="overlay1">
+                            
+                        </div> -->
+                    </div>  <!------1 ------>
+                </div>  <!------------- 0 -------------->
+                                 
+                             
+                               
+                  
+              </div>
+
+              <div class="row" >
+                
+                 <!-- 1st Column -->
+                <div  id="image1" class="col-sm-6" style="margin-bottom: 3%;"> <!------------- 0 -------------->
+                    
+                    <div class="container-xs container1" style="margin-bottom: 5%;"><!------1 ------>
+                        
+                          <iframe  src="project 2 server to database/Screenshot (258).png" alt="" width="100%" height="350"> </iframe>
+
+                          
+                      <!-- <div class="overlay1">
+                       
+                      </div> -->
+                    </div>  <!------1 ------>
+                </div>  <!------------- 0 -------------->
+                      
+                 <!-- 2nd Column -->
+                    
+                <div id="image2" class="col-sm-6 " style="margin-bottom: 2%;"><!------------- 1 -------------->
+                    <div class="container-xs container1" style="margin-bottom: 5%;"> <!------2 ------>
+                      
+                        <iframe  src="project 2 server to database/Screenshot (243).png" alt="" width="100%" height="340" > </iframe>
+                    </div>  <!------2 ------>
+                </div> <!------------- 1 -------------->
+             </div>
+      
+             <div class="row" >
+               
+                <!-- 1st Column -->
+                        <div  id="image1" class="col-sm-7" style="margin-bottom: 3%;"> <!------------- 0 -------------->
+                        <div class="container-xs container1" style="margin-bottom: 5%;"><!------1 ------>
+                        <iframe  src="project 2 server to database/Screenshot (259).png" alt="" width="100%" height="340" > </iframe>
+                        <!-- <div class="overlay1">
+
+                        </div> -->
+                        </div>  <!------1 ------>
+                        </div>  <!------------- 0 -------------->
+
+                                    <!-- 2nd Column -->
+
+                        <div id="image2" class="col-sm-5 " style="margin-bottom: 2%;"><!------------- 1 -------------->
+                        <div class="container-xs container1" style="margin-bottom: 5%;"> <!------2 ------>
+
+                            <iframe  src="project 2 server to database/Screenshot (242).png" alt="" width="100%" height="340" > </iframe>
+
+                        </div>  <!------2 ------>
+                        </div> <!------------- 1 -------------->
+             </div>
+
+             <div class="row" >
+                <!-- 1st Column -->
+               
+                    <div  id="image1" class="col-sm-6" style="margin-bottom: 3%;"> <!------------- 0 -------------->
+                        <div class="container-xs container1" style="margin-bottom: 5%;"><!------1 ------>
+                            <iframe  src="project 2 server to database/Screenshot (257).png" alt="" width="100%" height="400"  > </iframe>
+                            <!-- <div class="overlay1">
+                                
+                            </div> -->
+                        </div>  <!------1 ------>
+                    </div>  <!------------- 0 -------------->
+                                
+                            <!-- 2nd Column -->
+                            
+                    <div  class="col-sm-6 " style="margin-bottom: 2%;"><!------------- 1 -------------->
+                        <div class="container-xs container1" style="margin-bottom: 5%;"> <!------2 ------>
+                            <iframe  src="project 2 server to database/Screenshot (261).png" alt="" width="100%" height="400"  > </iframe>
+                             
+                        </div>  <!------2 ------>
+                    </div> <!------------- 1 -------------->
+            </div>
+
+             <div class="row" >
+               
+                                                         <!-- 1st Column -->
+                <div  id="image1" class="col-sm-7" style="margin-bottom: 3%;"> <!------------- 0 -------------->
+                    <div class="container-xs container1" style="margin-bottom: 5%;"><!------1 ------>
+                          <iframe  src="project 2 server to database/Screenshot (255).png" alt="" width="100%" height="350"  > </iframe>
+                      <!-- <div class="overlay1">
+                       
+                      </div> -->
+                    </div>  <!------1 ------>
+                </div>  <!------------- 0 -------------->
+                      
+                                                         <!-- 2nd Column -->
+                    
+                <div id="image2" class="col-sm-5" style="margin-bottom: 2%;"><!------------- 1 -------------->
+                    <div class="container-xs container1" style="margin-bottom: 5%;"> <!------2 ------>
+                        <iframe  src="project 2 server to database/Screenshot (260).png" alt="" width="100%" height="350"  > </iframe>
+                    </div>  <!------2 ------>
+                </div> <!------------- 1 -------------->
+             </div>
+      
+             <div class="row" >
+               
+                <!-- 1st Column -->
+               <div  id="image1" class="col-sm-7" style="margin-bottom: 3%;"> <!------------- 0 -------------->
+                   <div class="container-xs container1" style="margin-bottom: 5%;"><!------1 ------>
+                         <iframe  src="project 2 server to database/Screenshot (256).png" alt="" width="100%" height="350"  > </iframe>
+                     <!-- <div class="overlay1">
+                      
+                     </div> -->
+                   </div>  <!------1 ------>
+               </div>  <!------------- 0 -------------->
+                     
+                <!-- 2nd Column -->
+                   
+               <div id="image2" class="col-sm-5" style="margin-bottom: 2%;"><!------------- 1 -------------->
+                   <div class="container-xs container1" style="margin-bottom: 5%;"> <!------2 ------>
+                    <iframe  src="project 2 server to database/Screenshot (262).png" alt="" width="100%" height="350"  > </iframe>
+                   </div>  <!------2 ------>
+               </div> <!------------- 1 -------------->
+            </div>
+     
+         </div>
+       
+
+</body>
+</html>
